@@ -7,14 +7,16 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -40,17 +43,17 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   text-align: center;
   top: 40%;
@@ -65,7 +68,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -76,7 +79,7 @@ body {
   /* animation-delay: 3s; animation-iteration-count: 3; animation-timing-function: ;*/
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -119,7 +122,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -137,6 +140,7 @@ btn:visited {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
@@ -162,12 +166,12 @@ btn:visited {
   transition: all 0.4s;
 }
 
-.btn-white {
+.btn--white {
   background-color: white;
   color: #777;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: white;
 }
 
@@ -176,7 +180,7 @@ btn:visited {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.7s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
